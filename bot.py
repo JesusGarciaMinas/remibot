@@ -98,9 +98,6 @@ async def chakick(ctx, *args : discord.User):
 
 @client.command(pass_context = True)
 async def strike(ctx, warned: discord.User):
-	if ctx.message.author.server_permissions.manage_channels == 0:
-		await client.say("Solo para admins crack, maquina, titan, monstruo")
-		return
 	global warns
 	warns.append(warned)
 	if warns.count(warned) < 3:
