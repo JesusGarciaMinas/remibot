@@ -147,6 +147,11 @@ async def offmeta(ctx):
 	f.close()
 	await client.say("{} te ha tocado {}".format(ctx.message.author.mention, random.choice(champs)))
 
+@client.command(pass_context = True)
+async def reunion(ctx):
+	for member in ctx.message.server.members:
+		if member.status.online:
+			await client.move_member(member, ctx.message.channel)
 
 client.run(TOKEN)
 print("caca pedo culo pis");
