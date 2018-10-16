@@ -151,5 +151,9 @@ async def offmeta(ctx):
 async def globalpeace(ctx):
 	await client.say("Este método esta deprecated desde la version 0.2.45")
 
+@client.command(pass_context = True)
+async def github(ctx):
+	await client.say("https://github.com/oktorok/remibot")
+
 client.run(TOKEN)
 print("caca pedo culo pis");
