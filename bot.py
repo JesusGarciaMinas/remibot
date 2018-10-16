@@ -142,9 +142,6 @@ async def desalojo(ctx):
 					tmp += 1
 @client.command(pass_context = True)
 async def offmeta(ctx):
-	if ctx.message.author.server_permissions.manage_channels == 0:
-		await client.say("Solo para admins crack, maquina, titan, monstruo")
-		return
 	f = open("data", "r")
 	champs = f.read().split(", ")
 	f.close()
