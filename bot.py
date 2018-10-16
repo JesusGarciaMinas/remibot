@@ -147,5 +147,9 @@ async def offmeta(ctx):
 	f.close()
 	await client.say("{} te ha tocado {}".format(ctx.message.author.mention, random.choice(champs)))
 
+@client.command(pass_context = True)
+async def globalpeace(ctx):
+	await client.say("Este método esta deprecated desde la version 0.2.45")
+
 client.run(TOKEN)
 print("caca pedo culo pis");
